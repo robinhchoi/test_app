@@ -46,7 +46,7 @@ def send():
         pet = Pet(name=name, lat=lat, lon=lon)
         db.session.add(pet)
         db.session.commit()
-        return redirect("http://localhost:5000/", code=302)
+        return redirect("/", code=302)
 
     return render_template("form.html")
 
